@@ -4,7 +4,7 @@
    Plugin URI: http://ounziw.com/2010/10/01/featured-image-on-edit-php/
    Description: Menu Simplify
    Author: Fumito MIZUNO
-   Version: 1
+   Version: 1.1
    Author URI: http://ounziw.com/
  */
  
@@ -17,6 +17,10 @@ add_filter('manage_posts_columns', 'show_featured_image_post_column');
 function edit_featured_images($column_name, $id) {
     if( $column_name == 'featuredimage' && has_post_thumbnail()) {
         the_post_thumbnail('thumbnail');
+        echo "<div class=\"row-actions\"><span class='edit'>";
+        $thumbid = get_post_meta( $id, '_thumbnail_id', true );
+        echo '<a href="'. admin_url() . 'media.php?attachment_id=' . $thumbid . '&action=edit">' . __( 'Edit' ) . '</a>';
+        echo "</span></div>";
     }
 }
 add_action('manage_posts_custom_column', 'edit_featured_images', 10, 2);

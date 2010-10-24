@@ -24,5 +24,8 @@ In version 1.0, the size of images is fixed to thumbnail(150x150). If you want t
 
 == Changelog ==
 
+= 1.1 =
+Add 'edit' link for the featured image, if it exists.
+
 = 1.0 =
 New Release
