@@ -18,8 +18,7 @@ function edit_featured_images($column_name, $id) {
     if( $column_name == 'featuredimage' && has_post_thumbnail()) {
         the_post_thumbnail('thumbnail');
         echo "<div class=\"row-actions\"><span class='edit'>";
-        $thumbid = get_post_meta( $id, '_thumbnail_id', true );
-        echo '<a href="'. admin_url() . 'media.php?attachment_id=' . $thumbid . '&action=edit">' . __( 'Edit' ) . '</a>';
+        echo '<a href="'. admin_url() . 'media-upload.php?post_id=163media.php?attachment_id=' . $id . '&type=image&TB_iframe=1">' . __( 'Edit' ) . '</a>';
         echo "</span></div>";
     }
 }
