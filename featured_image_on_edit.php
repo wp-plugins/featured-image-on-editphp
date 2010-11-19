@@ -2,7 +2,7 @@
 /*
    Plugin Name: Featured Image on Edit.php
    Plugin URI: http://ounziw.com/2010/10/01/featured-image-on-edit-php/
-   Description: Menu Simplify
+   Description: When You Visit Edit.php, Featured Image will be shown.
    Author: Fumito MIZUNO
    Version: 1.1
    Author URI: http://ounziw.com/
